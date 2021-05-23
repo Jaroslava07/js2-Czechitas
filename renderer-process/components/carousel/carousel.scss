@@ -1,0 +1,33 @@
+header.header-news {
+    & > button {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        color: rgba (23, 23, 23, .4); /*cerna barva $black: #232323; z _colors.scss  nechyta se*/
+        cursor: pointer;
+        user-select: none;
+        transition: .5s;
+        &:focus {
+            outline: none;
+            }
+            &:hover {
+            color: #232323; /*cerna barva $black: #232323; z _colors.scss  nechyta se*/
+            background-color: rgba(#F7F7F7, .4); /*bila  barva  z _colors.scss  nechyta se*/
+            }
+        &.last {
+            right: 0;
+        }
+    }
+    & > div.header-news__container {
+        display: flex;
+    }
+    position: relative;
+    min-height: 18rem;
+}
+
+header.header-news > div {
+    flex: 1 0 0;
+}
