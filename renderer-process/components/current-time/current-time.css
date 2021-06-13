@@ -1,0 +1,19 @@
+#modal-timer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    color: white;
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: xxx-large;
+}
+
+#modal-timer.hide {
+    display: none;
+}
