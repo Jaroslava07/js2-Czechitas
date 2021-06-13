@@ -1,3 +1,5 @@
+@import 'colors';
+
 header.header-news {
     & > button {
         position: absolute;
@@ -6,7 +8,7 @@ header.header-news {
         border: none;
         border-radius: 0;
         background-color: transparent;
-        color: rgba (23, 23, 23, .4); /*cerna barva $black: #232323; z _colors.scss  nechyta se*/
+        color: rgba ($black, .4);
         cursor: pointer;
         user-select: none;
         transition: .5s;
@@ -14,8 +16,8 @@ header.header-news {
             outline: none;
             }
             &:hover {
-            color: #232323; /*cerna barva $black: #232323; z _colors.scss  nechyta se*/
-            background-color: rgba(#F7F7F7, .4); /*bila  barva  z _colors.scss  nechyta se*/
+            color: $black; 
+            background-color: rgba($white, .4);
             }
         &.last {
             right: 0;

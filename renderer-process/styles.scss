@@ -19,14 +19,13 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-
-
 section.main-content {
     display: flex;
     flex-wrap: wrap; /* zalomeni radku */
     gap: 1rem; /* rozestupy mezi elementy */
     padding-left: 1rem; /* zarovnani zleva */
     }
+
 
 .main-content__day {
 aspect-ratio: 1/1; /* zachovani pomeru stran velikosti dnu (stverce) */
@@ -43,3 +42,50 @@ transition: .5s; /* casovy udaj pro animovani prechodu zmen css */
 .main-content_day:hover {
 background-color: rgba(0, 0, 0, .15); /* zmena pozadi pri hoveru */
 }
+
+
+section.main-content {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+section.modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $light-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body {
+    min-width: 35rem;
+    background-color: $white;
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem 1rem $light-dark;
+    padding: 1rem;
+}
+
+.modal-header {
+    display: flex;
+    & > *:first-child {
+        flex: 1 0 0;
+    }
+}
+
+.separator {
+    border-bottom: 1px solid $light-dark;
+    margin: 1rem 0;;
+
+}
+
+.modal-actions {
+    padding-top: 1rem;
+}
+
+
