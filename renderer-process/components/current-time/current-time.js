@@ -27,11 +27,12 @@ export class CurrentTime extends HTMLElement {
     }
 
     showTime() {
+        document.querySelector('#modal-timer').innerText = (new Date()).toLocaleTimeString();
         document.querySelector('#modal-timer').classList.remove('hide');
-        for (var i = 0; i < 6; i++) {
+        for (var i = 1; i < 6; i++) {
             setTimeout(function () {
                 document.querySelector('#modal-timer').innerText = (new Date()).toLocaleTimeString();
-            }, i * 1000);            
+            }, i * 1000);
         }
         setTimeout(function () {
             document.querySelector('#modal-timer').classList.add('hide');
